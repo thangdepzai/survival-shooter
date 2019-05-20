@@ -47,7 +47,7 @@ public class PlayerShooting : MonoBehaviour
     public void DisableEffects ()
     {
         gunLine.enabled = false;
-        gunLight.enabled = false;
+         gunLight.enabled = false;
     }
 
 
@@ -58,7 +58,6 @@ public class PlayerShooting : MonoBehaviour
         gunAudio.Play ();
 
         gunLight.enabled = true;
-
         gunParticles.Stop ();
         gunParticles.Play ();
 

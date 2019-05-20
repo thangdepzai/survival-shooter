@@ -84,4 +84,12 @@ public class PlayerHealth : MonoBehaviour
     {
         SceneManager.LoadScene (0);
     }
+    public void AddHealth(int a)
+    {
+        if (currentHealth + a > startingHealth)
+        {
+            currentHealth = startingHealth;
+        }
+        else currentHealth = currentHealth + a;
+    }
 }

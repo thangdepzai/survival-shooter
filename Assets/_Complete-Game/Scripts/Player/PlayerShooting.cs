@@ -18,7 +18,7 @@ namespace CompleteProject
         LineRenderer gunLine;                           // Reference to the line renderer.
         AudioSource gunAudio;                           // Reference to the audio source.
         Light gunLight;                                 // Reference to the light component.
-		public Light faceLight;								// Duh
+		//
         float effectsDisplayTime = 0.2f;                // The proportion of the timeBetweenBullets that the effects will display for.
 
 
@@ -69,7 +69,7 @@ namespace CompleteProject
         {
             // Disable the line renderer and the light.
             gunLine.enabled = false;
-			faceLight.enabled = false;
+			//faceLight.enabled = false;
             gunLight.enabled = false;
         }
 
@@ -84,7 +84,7 @@ namespace CompleteProject
 
             // Enable the lights.
             gunLight.enabled = true;
-			faceLight.enabled = true;
+			//faceLight.enabled = true;
 
             // Stop the particles from playing if they were, then start the particles.
             gunParticles.Stop ();

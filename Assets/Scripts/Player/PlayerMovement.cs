@@ -78,8 +78,16 @@ public class PlayerMovement : MonoBehaviour
     {
         // Create a boolean that is true if either of the input axes is non-zero.
         bool walking = h != 0f || v != 0f;
-
+        
+        bool isLeft = (h == -1) ? true : false;
+        anim.SetBool("IsWalk_Left", isLeft);
+        bool isRight = (h == 1) ? true : false;
+        anim.SetBool("IsWalk_Right", isRight);
+        bool isForward = (v == 1) ? true : false;
+        anim.SetBool("IsWalk_Forward", isForward);
+        bool isBack = (v == -1) ? true : false;
+        anim.SetBool("IsWalk_Back", isBack);
         // Tell the animator whether or not the player is walking.
-        anim.SetBool("IsWalking", walking);
+        //anim.SetBool("IsWalking", walking);
     }
 }
